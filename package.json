@@ -11,15 +11,18 @@
   },
   "dependencies": {
     "@nuxtjs/eslint-module": "^4.1.0",
+    "@vueuse/core": "^10.9.0",
     "@vueuse/router": "^10.9.0",
+    "element-plus": "^2.7.0",
     "nuxt": "^3.11.2",
     "traveler-map": "^1.0.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "@element-plus/nuxt": "^1.0.8",
     "@nuxt/eslint-config": "^0.2.0",
-    "eslint": "^8.57.0",
-    "@nuxtjs/tailwindcss": "^6.11.4"
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "eslint": "^8.57.0"
   }
 }
