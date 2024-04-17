@@ -21,7 +21,8 @@
         </button>
       </nuxt-link>
     </div>
-    <div class="">
+
+    <div>
       avatar
     </div>
   </div>
@@ -29,7 +30,7 @@
 
 <style scoped>
 .nav {
-  @apply flex items-center justify-between px-[400px] py-1 bg-gray-100 m-auto font-bold select-none;
+  @apply flex items-center justify-between px-[400px] py-1 bg-gray-100 font-bold select-none w-[100vw];
 
   .logo {
     @apply flex items-center text-2xl hover:bg-gray-300 p-2 rounded-lg;
@@ -44,7 +45,7 @@
   }
 
   .link {
-    @apply text-black border-0 rounded-full hover:bg-gray-300 p-2 rounded-lg;
+    @apply text-black hover:bg-gray-300 p-2 rounded-lg;
   }
 }
 </style>

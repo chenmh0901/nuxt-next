@@ -27,10 +27,7 @@ const addLazyData = async () => {
 const getResultFiltered = useFilter(computeData.value)
 
 const onclick = () => {
-  // 筛选
-  // computeData.value = getResultFiltered()
-
-  addLazyData()
+  computeData.value = getResultFiltered()
 }
 
 const target = ref(null)
@@ -52,14 +49,18 @@ watch(targetIsVisible, (isVisible) => {
 </script>
 
 <template>
-  <div>
+  <div class="content">
     <el-button @click="onclick">
       [DEBUG-SORT]
     </el-button>
     <ul class="flex gap-1 flex-wrap ">
       <Story v-for="data in computeData" :key="data.id" :data="data" />
-      <div ref="target" v-loading="true" class=" h-[404px] w-[332px]" />
+      <div ref="target" v-loading="true" class="h-[404px] w-[332px]" />
     </ul>
   </div>
 </template>
-<style scoped></style>
+<style scoped>
+.content {
+  @apply flex flex-col justify-center items-center w-[100vw] p-2;
+}
+</style>
