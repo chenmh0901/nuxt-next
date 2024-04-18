@@ -11,9 +11,14 @@ const mockData: StoryDetail[] = Array.from({ length: 3 }, (_, i) => ({
 
 const computeData = ref(mockData)
 
+// 查找数据
+const getResultFiltered = useFilter(computeData.value)
+const onclick = () => {
+  computeData.value = getResultFiltered()
+}
+
+// 增加懒加载数据
 let loading = false
-
-
 const addLazyData = async () => {
   if (loading) return
   loading = true
@@ -23,11 +28,6 @@ const addLazyData = async () => {
   if (targetIsVisible.value) {
     addLazyData()
   }
-}
-const getResultFiltered = useFilter(computeData.value)
-
-const onclick = () => {
-  computeData.value = getResultFiltered()
 }
 
 const target = ref(null)
@@ -40,9 +40,9 @@ const { stop } = useIntersectionObserver(
   },
 )
 
+// 长列表懒加载
 watch(targetIsVisible, (isVisible) => {
   if (isVisible) {
-    console.log('isVisible', isVisible);
     addLazyData()
   }
 })
@@ -53,14 +53,16 @@ watch(targetIsVisible, (isVisible) => {
     <el-button @click="onclick">
       [DEBUG-SORT]
     </el-button>
-    <ul class="flex gap-1 flex-wrap ">
-      <Story v-for="data in computeData" :key="data.id" :data="data" />
+    <ul class="flex gap-1 flex-wrap m-auto justify-center">
+      <Story v-for="data in computeData" :key="data.id" class="story-card" :data="data" />
       <div ref="target" v-loading="true" class="h-[404px] w-[332px]" />
     </ul>
   </div>
 </template>
 <style scoped>
 .content {
-  @apply flex flex-col justify-center items-center w-[100vw] p-2;
+  @apply flex flex-col items-center w-[1200px] mx-auto gap-1 py-2;
 }
+
+.story-card {}
 </style>

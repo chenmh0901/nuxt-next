@@ -10,18 +10,14 @@ const bkgStyle = computed(() => {
       "#" + Math.floor(Math.random() * 16777215).toString(16)
   }
 })
-const thumbStyle = computed(() => {
-  return {
-    "mix-blend-mode": "multiply",
-  }
-})
+
 </script>
 
 <template>
   <NuxtLink :to="`/detail/${data.id}`">
-    <div class="fade-in">
+    <div class="fade-in ">
       <div :style="bkgStyle">
-        <img :style="thumbStyle as any" :src="data.avatarSrc" alt="img">
+        <img :src="data.avatarSrc" alt="img">
       </div>
       <div>
         <h2>{{ data.title }}</h2>

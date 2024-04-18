@@ -18,7 +18,7 @@ const logs = ref<number[]>([])
 </script>
 
 <template>
-  <div class="flex gap-3 items-center justify-center p-4 m-4 shadow-md rounded-xl w-[300px] bg-cyan-50">
+  <div class="flex gap-3 items-center justify-center p-4 m-4 shadow-md rounded-xl w-[300px] bg-cyan-50 h-[780px]">
     {{ trottle }}
     <el-button @click="upload">
       上传
