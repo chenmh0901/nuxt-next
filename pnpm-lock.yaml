@@ -35,8 +35,8 @@ dependencies:
 
 devDependencies:
   '@element-plus/nuxt':
-    specifier: ^1.0.8
-    version: 1.0.8(@element-plus/icons-vue@2.3.1)(element-plus@2.7.0)
+    specifier: ^1.0.9
+    version: 1.0.9(@element-plus/icons-vue@2.3.1)(element-plus@2.7.0)
   '@nuxt/eslint-config':
     specifier: ^0.2.0
     version: 0.2.0(eslint@8.57.0)
@@ -490,8 +490,8 @@ packages:
     dependencies:
       vue: 3.4.21(typescript@5.4.4)
 
-  /@element-plus/nuxt@1.0.8(@element-plus/icons-vue@2.3.1)(element-plus@2.7.0):
-    resolution: {integrity: sha512-A8CKdk0z1t9tiw2JowZGwYwSyZZoOBXFgedSqyeAO3wmp26ZqBzKir0/5BN54mXQ06VYZZRtq3cmkpNtJOKGQA==}
+  /@element-plus/nuxt@1.0.9(@element-plus/icons-vue@2.3.1)(element-plus@2.7.0):
+    resolution: {integrity: sha512-ChBANMVfo8Mwov/5Yj0KAHVOZY3C84KUxYFSrF06JHCJKUQ4TwT0YyaLZ7UKd2km/vpjsj0aGdkG/eUy813S+w==}
     peerDependencies:
       '@element-plus/icons-vue': '>=0.2.6'
       element-plus: '>=2'
